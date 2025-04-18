@@ -1,5 +1,6 @@
 import Navbar from '@/components/Navbar';
 import '../styles/globals.css';
+import React from 'react';
 
 export const metadata = {
   title: 'Firmi - AI-Powered Financial Research',
