@@ -1,4 +1,4 @@
-import Select from "./select";
+
 import Markdown from "./mark-down";
 import Switch from "./custom-switch";
 import { CustomInput } from "./input";
@@ -16,7 +16,6 @@ import { CircularProgress } from "./circular-progress";
 
 export {
   Tabs,
-  Select,
   Switch,
   Markdown,
   DataTable,

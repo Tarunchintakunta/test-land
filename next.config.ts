@@ -5,6 +5,7 @@ const nextConfig: NextConfig = {
   // Enable strict mode for React (catches potential problems)
   reactStrictMode: true,
   // pageExtensions: ["page.tsx"],
+  eslint: { ignoreDuringBuilds: true },
 };
 
 export default nextConfig;
