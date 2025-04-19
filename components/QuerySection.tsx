@@ -55,9 +55,10 @@ const QuerySection = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-4xl font-semibold text-[#415d80] mb-4">Intelligent Query System</h2>
+          <h2 className="text-4xl font-semibold text-[#415d80] mb-4">Intelligence On Demand</h2>
           <p className="text-lg text-tertiary max-w-2xl mx-auto">
-            Ask anything about company financials, market data, or business metrics
+          Not just faster answers. Better ones.<br></br>
+          One question. Every dataset. Instant clarity.
           </p>
         </motion.div>
 
