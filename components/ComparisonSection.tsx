@@ -151,39 +151,39 @@ const ComparisonSection = () => {
           >
             {/* Without Card */}
             <motion.div 
-              className="comparison-card w-[42%] rounded-xl p-5 shadow-xl flex flex-col bg-[#f5f2f0]"
+              className="comparison-card w-[42%] rounded-xl p-5 shadow-xl flex flex-col bg-[#1e1e1e]"
               initial={{ x: -50, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.5 }}
             >
               <div className="flex items-center justify-between mb-4">
                 <div className="flex items-center">
-                  <span className="bg-[#e6e1dd] text-[#415d80] px-4 py-1.5 rounded-full text-sm font-medium">
+                  <span className="bg-[#2b2b2b] text-white px-4 py-1.5 rounded-full text-sm font-medium">
                     {comparisonCards[currentCardIndex].withoutTitle}
                   </span>
                 </div>
-                <span className="bg-[#d1cbc5] text-[#415d80] px-3 py-1 rounded-full text-sm font-medium">
+                <span className="bg-[#333333] text-white px-3 py-1 rounded-full text-sm font-medium">
                   {comparisonCards[currentCardIndex].withoutTag}
                 </span>
               </div>
               
-              <div className="bg-[#e6e1dd] rounded-lg p-4 mb-4 flex-grow">
-                <div className="bg-[#d1cbc5] rounded-md p-2.5 mb-3 text-sm text-[#415d80]">
+              <div className="bg-[#2b2b2b] rounded-lg p-4 mb-4 flex-grow">
+                <div className="bg-[#333333] rounded-md p-2.5 mb-3 text-sm text-gray-200">
                   {comparisonCards[currentCardIndex].withoutSearch}
                 </div>
                 
-                <div className="text-[#415d80] text-sm mb-4 leading-relaxed">
+                <div className="text-white text-sm mb-4 leading-relaxed">
                   {comparisonCards[currentCardIndex].withoutResult}
                 </div>
                 
-                <div className="border-t border-[#d1cbc5] pt-3 text-[#415d80] text-sm">
+                <div className="border-t border-[#444444] pt-3 text-gray-300 text-sm">
                   {comparisonCards[currentCardIndex].withoutFeature}
                 </div>
               </div>
               
               <div className="flex items-center justify-between text-sm mt-auto">
-                <span className="text-[#415d80]">{comparisonCards[currentCardIndex].withoutFooter}</span>
-                <span className="bg-[#d1cbc5] px-3 py-1.5 rounded-md text-[#415d80] text-xs font-medium">
+                <span className="text-gray-300">{comparisonCards[currentCardIndex].withoutFooter}</span>
+                <span className="bg-[#333333] px-3 py-1.5 rounded-md text-white text-xs font-medium">
                   {comparisonCards[currentCardIndex].withoutFooterLabel}
                 </span>
               </div>
@@ -191,24 +191,24 @@ const ComparisonSection = () => {
             
             {/* With Card */}
             <motion.div 
-              className="comparison-card w-[42%] rounded-xl p-5 shadow-xl flex flex-col bg-[#1e2937]"
+              className="comparison-card w-[42%] rounded-xl p-5 shadow-xl flex flex-col bg-[#415d80]"
               initial={{ x: 50, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.2 }}
             >
               <div className="flex items-center justify-between mb-4">
                 <div className="flex items-center">
-                  <span className="bg-[#2b4559]/40 text-white px-4 py-1.5 rounded-full text-sm font-medium">
+                  <span className="bg-[#4e6b8e]/60 text-white px-4 py-1.5 rounded-full text-sm font-medium">
                     {comparisonCards[currentCardIndex].withTitle}
                   </span>
                 </div>
-                <span className="bg-[#3b82f6] text-white px-3 py-1 rounded-full text-sm font-medium">
+                <span className="bg-[#5a7799] text-white px-3 py-1 rounded-full text-sm font-medium">
                   {comparisonCards[currentCardIndex].withTag}
                 </span>
               </div>
               
-              <div className="bg-[#2b3a4a] rounded-lg p-4 mb-4 flex-grow">
-                <div className="bg-[#374151] rounded-md p-2.5 mb-3 text-sm text-gray-100">
+              <div className="bg-[#4e6b8e] rounded-lg p-4 mb-4 flex-grow">
+                <div className="bg-[#5a7799] rounded-md p-2.5 mb-3 text-sm text-gray-100">
                   {comparisonCards[currentCardIndex].withSearch}
                 </div>
                 
@@ -216,14 +216,14 @@ const ComparisonSection = () => {
                   {comparisonCards[currentCardIndex].withResult}
                 </div>
                 
-                <div className="border-t border-[#374151] pt-3 text-gray-100 text-sm">
+                <div className="border-t border-[#5a7799]/50 pt-3 text-gray-100 text-sm">
                   {comparisonCards[currentCardIndex].withFeature}
                 </div>
               </div>
               
               <div className="flex items-center justify-between text-sm mt-auto">
-                <span className="text-gray-300">{comparisonCards[currentCardIndex].withFooter}</span>
-                <span className="bg-[#3b82f6] px-3 py-1.5 rounded-md text-white text-xs font-medium">
+                <span className="text-gray-100">{comparisonCards[currentCardIndex].withFooter}</span>
+                <span className="bg-[#5a7799] px-3 py-1.5 rounded-md text-white text-xs font-medium">
                   {comparisonCards[currentCardIndex].withFooterLabel}
                 </span>
               </div>
