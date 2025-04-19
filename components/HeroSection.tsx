@@ -21,7 +21,7 @@ const HeroSection = () => {
               <br /> research with AI
             </h1>
             <p className="text-lg md:text-xl text-firmi/70 max-w-lg">
-              Financial research made simpler, better, and faster for the modern investor
+            The world’s financial data is complex and chaotic. Firmi distills it into actionable insight designed to power your investment decisions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link 
