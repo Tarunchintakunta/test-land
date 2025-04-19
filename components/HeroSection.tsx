@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 const HeroSection = () => {
   return (
-    <section className="pt-32 pb-16 bg-gray-50 overflow-hidden">
+    <section className="pt-50 pb-16 bg-gray-50 overflow-hidden">
       <div className="w-[90%] mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           {/* Text Content - Left Side */}
