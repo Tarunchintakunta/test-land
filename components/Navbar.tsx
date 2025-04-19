@@ -38,11 +38,11 @@ const Navbar = () => {
   return (
     <header className="fixed top-0 left-0 w-full z-50 flex justify-center pt-4">
       <motion.nav 
-        className={`flex items-center justify-between px-6 sm:px-12 py-3 w-[90%] sm:w-[70%] max-w-6xl rounded-full ${
+        className={`flex items-center justify-between px-6 sm:px-12 py-3 w-[90%] sm:w-[70%] max-w-6xl ${
           scrolled 
             ? 'shadow-lg bg-[#e4e4e5] backdrop-blur-lg backdrop-saturate-150' 
             : 'shadow-md bg-[#e4e4e5] backdrop-blur-md backdrop-saturate-125'
-        } border border-gray-200/20`}
+        } border border-gray-200/20 rounded-2xl`}
         initial={{ y: -100 }}
         animate={{ y: visible ? 0 : -100 }}
         transition={{ type: 'spring', stiffness: 120, damping: 20 }}
