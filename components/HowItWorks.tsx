@@ -12,13 +12,13 @@ const HowItWorks = () => {
       <div className="section-container">
         <div className="text-center max-w-3xl mx-auto mb-12">
           <motion.h1
-            className="heading-lg text-[#415d80] mb-4"
+            className="heading-lg text-[#415d80] mb-4 text-3xl font-bold"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            See how Firmi transforms document processing
+            All the data you need in one place
           </motion.h1>
           <motion.p 
             className="body-text text-tertiary"
@@ -27,8 +27,7 @@ const HowItWorks = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
           >
-            Watch our short demo to understand how our AI-powered platform can revolutionize
-            your document workflow.
+            Firmi sources hundreds of millions of public and private data files and ingests them into our proprietary enterprise.
           </motion.p>
         </div>
 
