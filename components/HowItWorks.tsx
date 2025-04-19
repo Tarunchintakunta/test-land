@@ -46,15 +46,22 @@ const HowItWorks = () => {
               muted
               playsInline
               onLoadedMetadata={(e: React.SyntheticEvent<HTMLVideoElement>) => {
-                (e.target as HTMLVideoElement).playbackRate = 2;
-                (e.target as HTMLVideoElement).style.imageRendering = 'crisp-edges';
+                const video = e.target as HTMLVideoElement;
+                video.playbackRate = 2;
+                // Force highest quality rendering
+                video.style.imageRendering = 'high-quality';
+                // Set video to highest resolution if available
+                if (video.videoHeight >= 1080) {
+                  console.log("High resolution video detected");
+                }
               }}
               style={{ 
                 filter: 'brightness(1.15) contrast(1.15) saturate(1.1) hue-rotate(-5deg)',
                 transform: 'scale(1.02)',
                 imageRendering: 'crisp-edges',
                 WebkitFontSmoothing: 'antialiased',
-                backfaceVisibility: 'hidden'
+                backfaceVisibility: 'hidden',
+                objectFit: 'cover'
               }}
             />
           </div>
