@@ -17,8 +17,9 @@ const HeroSection = () => {
             className="space-y-6"
           >
             <h1 className="text-4xl md:text-5xl lg:text-5xl font-bold text-[#415d80] leading-tight">
-              Supercharge your investment
-              <br /> research with AI
+            The Intelligent Layer 
+            <br /> for your 
+            <br /> Investment Strategy
             </h1>
             <p className="text-lg md:text-xl text-firmi/70 max-w-lg">
             The world’s financial data is complex and chaotic. Firmi distills it into actionable insight designed to power your investment decisions.
@@ -28,7 +29,7 @@ const HeroSection = () => {
                 href="/secure/chat" 
                 className="btn-primary inline-flex items-center justify-center w-full sm:w-auto"
               >
-                Get Started
+                Explore Firmi
               </Link>
             </div>
           </motion.div>
