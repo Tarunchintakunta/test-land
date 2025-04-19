@@ -14,7 +14,7 @@ const ComparisonSection = () => {
     {
       title: 'Document Search',
       withoutTitle: 'WITHOUT FIRMI',
-      withoutSubtitle: 'Conventional Search',
+      // withoutSubtitle: 'Conventional Search',
       withoutSearch: 'Searching: "HDFC Bank NIM expansion Q3 FY25"',
       withoutResult: 'Results: 47 documents across 6 platforms. Now manually check each to find the actual numbers and management commentary...',
       withoutFeature: 'Manual cross-referencing required',
@@ -22,7 +22,7 @@ const ComparisonSection = () => {
       withoutTag: 'Limited Results',
       withoutFooterLabel: 'SEARCH',
       withTitle: 'WITH FIRMI',
-      withSubtitle: 'Smart Insights',
+      // withSubtitle: 'Smart Insights',
       withSearch: 'Searching: "Companies where NIM expanded >15bps QoQ but management cited pressure on yields"',
       withResult: 'Instant results: "4 banks including HDFC Bank (NIM +18bps to 4.32%) mentioned \'competitive pressure\' in Q3 FY25 calls despite margin expansion."',
       withFeature: 'Complex patterns identified automatically',
@@ -33,7 +33,7 @@ const ComparisonSection = () => {
     {
       title: 'Data Extraction',
       withoutTitle: 'WITHOUT FIRMI',
-      withoutSubtitle: 'Manual Extraction',
+      // withoutSubtitle: 'Manual Extraction',
       withoutSearch: 'Extracting: "Debt/EBITDA ratios for S&P 500 companies"',
       withoutResult: 'Results: Downloaded 500+ financial statements. Need to create formulas, normalize data, and manually check calculations.',
       withoutFeature: 'Hours of spreadsheet work required',
@@ -41,7 +41,7 @@ const ComparisonSection = () => {
       withoutTag: 'Time-Consuming',
       withoutFooterLabel: 'EXTRACT',
       withTitle: 'WITH FIRMI',
-      withSubtitle: 'Intelligent Extraction',
+      // withSubtitle: 'Intelligent Extraction',
       withSearch: 'Asking: "Which S&P 500 companies have increased Debt/EBITDA by >0.5x while maintaining dividend growth?"',
       withResult: 'Instant results: "17 companies including Microsoft, Apple, and Amazon increased leverage while growing dividends. Average Debt/EBITDA change: +0.7x."',
       withFeature: 'Calculations performed automatically across documents',
@@ -52,7 +52,7 @@ const ComparisonSection = () => {
     {
       title: 'Document Processing',
       withoutTitle: 'WITHOUT FIRMI',
-      withoutSubtitle: 'Rule-Based Processing',
+      // withoutSubtitle: 'Rule-Based Processing',
       withoutSearch: 'Processing: "Identify all clauses mentioning force majeure in contracts"',
       withoutResult: 'Results: Keyword search found 78 mentions across 42 documents. Need legal review to determine actual implications and variations.',
       withoutFeature: 'Legal expertise required for interpretation',
@@ -60,7 +60,7 @@ const ComparisonSection = () => {
       withoutTag: 'Limited Context',
       withoutFooterLabel: 'PROCESS',
       withTitle: 'WITH FIRMI',
-      withSubtitle: 'Contextual Understanding',
+      // withSubtitle: 'Contextual Understanding',
       withSearch: 'Asking: "Which contracts have force majeure clauses that could be triggered by supply chain disruptions?"',
       withResult: 'Instant results: "23 contracts have clauses specifically covering supply chain issues. 7 have high risk exposure based on geographic limitations and notification periods."',
       withFeature: 'Semantic understanding of contractual implications',
@@ -71,7 +71,7 @@ const ComparisonSection = () => {
     {
       title: 'Market Intelligence',
       withoutTitle: 'WITHOUT FIRMI',
-      withoutSubtitle: 'Manual Research',
+      // withoutSubtitle: 'Manual Research',
       withoutSearch: 'Researching: "Competitor pricing changes in SaaS market Q1 2025"',
       withoutResult: 'Results: 28 press releases and 15 earnings calls mention pricing. Need to manually extract specific changes and compare across companies.',
       withoutFeature: 'Comparison tables must be built manually',
@@ -79,7 +79,7 @@ const ComparisonSection = () => {
       withoutTag: 'Fragmented Data',
       withoutFooterLabel: 'RESEARCH',
       withTitle: 'WITH FIRMI',
-      withSubtitle: 'Competitive Intelligence',
+      // withSubtitle: 'Competitive Intelligence', 
       withSearch: 'Asking: "Which SaaS competitors increased enterprise pricing while adding AI features in Q1 2025?"',
       withResult: 'Instant results: "9 competitors including Salesforce, Adobe and ServiceNow raised enterprise pricing by avg. 12% while launching AI features. 3 maintained pricing despite new AI capabilities."',
       withFeature: 'Cross-company trend analysis automated',
@@ -90,7 +90,7 @@ const ComparisonSection = () => {
     {
       title: 'Compliance Monitoring',
       withoutTitle: 'WITHOUT FIRMI',
-      withoutSubtitle: 'Manual Auditing',
+      // withoutSubtitle: 'Manual Auditing',  
       withoutSearch: 'Auditing: "GDPR compliance violations in customer communications"',
       withoutResult: 'Results: 150+ customer emails need review for data privacy language. Compliance team must check each against latest regulations.',
       withoutFeature: 'Time-intensive compliance reviews required',
@@ -98,7 +98,7 @@ const ComparisonSection = () => {
       withoutTag: 'Resource Intensive',
       withoutFooterLabel: 'AUDIT',
       withTitle: 'WITH FIRMI',
-      withSubtitle: 'Automated Compliance',
+      // withSubtitle: 'Automated Compliance',
       withSearch: 'Asking: "Identify communications with non-compliant data retention policies under latest GDPR amendments"',
       withResult: 'Instant results: "27 communications found with outdated retention language. Auto-generated compliance report shows 3 high-risk templates needing immediate updates to align with Article 17 amendments."',
       withFeature: 'Regulatory updates continuously monitored',
@@ -159,10 +159,10 @@ const ComparisonSection = () => {
                   {comparisonCards[currentCardIndex].withoutTag}
                 </span>
               </div>
-              
+{/*               
               <h3 className="text-xl font-semibold text-white mb-4">
                 {comparisonCards[currentCardIndex].withoutSubtitle}
-              </h3>
+              </h3> */}
               
               <div className="bg-slate-800/80 rounded-lg p-4 mb-4 flex-grow">
                 <div className="bg-slate-700/90 rounded-md p-2.5 mb-3 text-sm text-gray-300">
@@ -203,10 +203,10 @@ const ComparisonSection = () => {
                   {comparisonCards[currentCardIndex].withTag}
                 </span>
               </div>
-              
+{/*               
               <h3 className="text-xl font-semibold text-white mb-4">
                 {comparisonCards[currentCardIndex].withSubtitle}
-              </h3>
+              </h3> */}
               
               <div className="bg-[#2b4559]/40 rounded-lg p-4 mb-4 flex-grow">
                 <div className="bg-[#2b4559]/60 rounded-md p-2.5 mb-3 text-sm text-gray-100">
