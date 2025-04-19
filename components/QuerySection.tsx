@@ -74,8 +74,7 @@ const QuerySection = () => {
         >
           <h2 className="text-4xl font-semibold text-[#415d80] mb-4">Intelligence On Demand</h2>
           <p className="text-lg text-tertiary max-w-2xl mx-auto">
-          Not just faster answers. Better ones.<br></br>
-          One question. Every dataset. Instant clarity.
+          Not just faster answers. Better ones. One question. Every dataset. Instant clarity.
           </p>
         </motion.div>
 
@@ -109,7 +108,7 @@ const QuerySection = () => {
                 <span className="text-sm text-gray-600">Deep Think</span>
                 <button 
                   onClick={toggleDeepThink}
-                  className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors duration-200 ease-in-out focus:outline-none ${deepThinkEnabled ? 'bg-blue-500' : 'bg-gray-200'}`}
+                  className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors duration-200 ease-in-out focus:outline-none ${deepThinkEnabled ? 'bg-[#415d80]' : 'bg-gray-200'}`}
                 >
                   <span
                     className={`inline-block h-4 w-4 rounded-full bg-white transition-transform duration-200 ease-in-out ${
@@ -124,7 +123,7 @@ const QuerySection = () => {
                 onClick={handleSend}
                 className="bg-[#456c8b] hover:bg-[#385a75] text-white rounded-md p-1 flex items-center justify-center"
               >
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-4 h-4 transform rotate-30" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
                 </svg>
               </button>
