@@ -6,7 +6,14 @@ import Button3D from './Button3D';
 
 const QuerySection = () => {
   const [displayText, setDisplayText] = useState('');
-  const fullText = 'Identify Nifty50 stocks with highest FII holding reduction last 2 quarters';
+  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
+  const questions = [
+    'Find mid-cap pharma: zero FDA warnings + 15%+ export CAGR',
+    'Auto sector outlook: EV transition & PLI scheme impact',
+    'PSU banks NPA resolution progress and credit growth comparison',
+    'Steel producers cost structure analysis amid volatile coking coal prices',
+    'Cement sector margin trends amid infrastructure push and input cost pressures'
+  ];
   const [isTyping, setIsTyping] = useState(true);
   const [activeSource, setActiveSource] = useState('all');
   const [deepThinkEnabled, setDeepThinkEnabled] = useState(false);
@@ -14,20 +21,30 @@ const QuerySection = () => {
   // Typing animation effect
   useEffect(() => {
     if (isTyping) {
-      if (displayText.length < fullText.length) {
+      const currentQuestion = questions[currentQuestionIndex];
+      if (displayText.length < currentQuestion.length) {
         const timeout = setTimeout(() => {
-          setDisplayText(fullText.substring(0, displayText.length + 1));
+          setDisplayText(currentQuestion.substring(0, displayText.length + 1));
         }, 50);
         
         return () => clearTimeout(timeout);
       } else {
         setIsTyping(false);
-        setTimeout(() => setIsTyping(true), 50);
+        setTimeout(() => {
+          setIsTyping(true);
+          setDisplayText('');
+          // Move to the next question or back to the first one if we're at the end
+          if (currentQuestionIndex === questions.length - 1) {
+            setCurrentQuestionIndex(0);
+          } else {
+            setCurrentQuestionIndex(currentQuestionIndex + 1);
+          }
+        }, 500); // Shorter pause before moving to next question
       }
     } else {
       setDisplayText('');
     }
-  }, [displayText, isTyping]);
+  }, [displayText, isTyping, currentQuestionIndex, questions]);
 
   // Handle send button click
   const handleSend = () => {
