@@ -54,13 +54,13 @@ const Navbar = () => {
 
         {/* Middle - Navigation Links */}
         <div className="flex items-center space-x-8">
-          <Link href="/product" className="text-sm font-medium text-gray-700 hover:text-primary transition-colors">
+          <Link href="/product" className="text-lg font-medium text-gray-700 hover:text-primary transition-colors">
             Product
           </Link>
-          <Link href="/solutions" className="text-sm font-medium text-gray-700 hover:text-primary transition-colors">
+          <Link href="/solutions" className="text-lg font-medium text-gray-700 hover:text-primary transition-colors">
             Solutions
           </Link>
-          <Link href="/research" className="text-sm font-medium text-gray-700 hover:text-primary transition-colors">
+          <Link href="/research" className="text-lg font-medium text-gray-700 hover:text-primary transition-colors">
             Research
           </Link>
         </div>
