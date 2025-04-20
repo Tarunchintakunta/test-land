@@ -16,7 +16,7 @@ const QuerySection = () => {
   ];
   const [isTyping, setIsTyping] = useState(true);
   const [activeSource, setActiveSource] = useState('all');
-  const [deepThinkEnabled, setDeepThinkEnabled] = useState(false);
+  const [deepThinkEnabled, setDeepThinkEnabled] = useState(true);
 
   // Typing animation effect
   useEffect(() => {
@@ -102,9 +102,18 @@ const QuerySection = () => {
                   <span className="typing-cursor ml-1 w-0.5 h-5 bg-primary animate-pulse"></span>
                 )}
               </div>
+                {/* Attachment Button */}
+                <button 
+                className="text-black hover:text-gray-700 mr-3"
+                aria-label="Add attachment"
+              >
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15.172 7l-6.586 6.586a2 2 0 102.828 2.828l6.414-6.586a4 4 0 00-5.656-5.656l-6.415 6.585a6 6 0 108.486 8.486L20.5 13"></path>
+                </svg>
+              </button>
               
               {/* Deep Think Toggle */}
-              <div className="flex items-center space-x-2">
+              <div className="flex items-center space-x-2 mr-3">
                 <span className="text-sm text-gray-600">Deep Think</span>
                 <button 
                   onClick={toggleDeepThink}
@@ -118,12 +127,14 @@ const QuerySection = () => {
                 </button>
               </div>
               
+            
+              
               {/* Send Button */}
               <button 
                 onClick={handleSend}
-                className="bg-[#456c8b] hover:bg-[#385a75] text-white rounded-md p-1 flex items-center justify-center"
+                className="bg-[#415d80] hover:bg-[#385a75] text-white rounded-lg px-3 py-2 flex items-center justify-center shadow-sm transition-all duration-200 ease-in-out hover:shadow-md"
               >
-                <svg className="w-4 h-4 transform rotate-30" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-5 h-5 transform rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
                 </svg>
               </button>
