@@ -18,31 +18,35 @@ const QuerySection = () => {
   const [activeSource, setActiveSource] = useState('all');
   const [deepThinkEnabled, setDeepThinkEnabled] = useState(true);
 
-  // Typing animation effect
+  // Typing animation effect with 3-second pause between questions
   useEffect(() => {
     if (isTyping) {
       const currentQuestion = questions[currentQuestionIndex];
       if (displayText.length < currentQuestion.length) {
         const timeout = setTimeout(() => {
           setDisplayText(currentQuestion.substring(0, displayText.length + 1));
-        }, 50);
+        }, 30); // Speed of typing
         
         return () => clearTimeout(timeout);
       } else {
-        setIsTyping(false);
-        setTimeout(() => {
-          setIsTyping(true);
+        // When finished typing, wait 3 seconds before moving to next question
+        const pauseTimeout = setTimeout(() => {
+          setIsTyping(false);
           setDisplayText('');
-          // Move to the next question or back to the first one if we're at the end
-          if (currentQuestionIndex === questions.length - 1) {
-            setCurrentQuestionIndex(0);
-          } else {
-            setCurrentQuestionIndex(currentQuestionIndex + 1);
-          }
-        }, 500); // Shorter pause before moving to next question
+          
+          // Move to the next question
+          setCurrentQuestionIndex((prevIndex) => 
+            prevIndex === questions.length - 1 ? 0 : prevIndex + 1
+          );
+          
+          // Start typing the next question after a brief delay
+          setTimeout(() => {
+            setIsTyping(true);
+          }, 100);
+        }, 3000); // 3 second pause after completing a question
+        
+        return () => clearTimeout(pauseTimeout);
       }
-    } else {
-      setDisplayText('');
     }
   }, [displayText, isTyping, currentQuestionIndex, questions]);
 
@@ -99,7 +103,7 @@ const QuerySection = () => {
                   {displayText || "Ask about market patterns, correlations, or insights..."}
                 </span>
                 {isTyping && (
-                  <span className="typing-cursor ml-1 w-0.5 h-5 bg-primary animate-pulse"></span>
+                  <span className="typing-cursor ml-1 w-0.5 h-5 bg-[#415d80] animate-pulse"></span>
                 )}
               </div>
                 {/* Attachment Button */}
