@@ -72,7 +72,7 @@ const QuerySection = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-4xl font-semibold text-[#415d80] mb-4">Intelligence On Demand</h2>
+          <h2 className="text-3xl font-semibold text-[#415d80] mb-4">Intelligence On Demand</h2>
           <p className="text-lg text-tertiary max-w-2xl mx-auto">
           Not just faster answers. Better ones. One question. Every dataset. Instant clarity.
           </p>

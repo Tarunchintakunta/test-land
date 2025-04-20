@@ -15,10 +15,10 @@ export default function Home() {
       <QuerySection />
       <HowItWorks />
       <ComparisonSection />
-      <DelegateSection />
+      {/* <DelegateSection />
       <SearchSection />
       <PresentationSection />
-      <WorkspaceSection />
+      <WorkspaceSection /> */}
       <Footer />
     </main>
   );
