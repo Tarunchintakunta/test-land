@@ -37,9 +37,9 @@ const HowItWorks = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <div className="relative aspect-video rounded-xl overflow-hidden shadow-xl bg-gradient-to-r from-[#2b4559]/5 to-[#497293]/5">
+          <div className="relative aspect-video rounded-xl overflow-hidden shadow-xl bg-gradient-to-r from-[#2b4559]/5 to-[#497293]/5 p-2 md:p-4">
             <video
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover rounded-lg"
               src="/Firmi floww.mp4"
               autoPlay
               loop
