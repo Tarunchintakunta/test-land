@@ -151,39 +151,39 @@ const ComparisonSection = () => {
           >
             {/* Without Card */}
             <motion.div 
-              className="comparison-card w-[42%] rounded-xl p-5 shadow-xl flex flex-col bg-[#1e1e1e]"
+              className="comparison-card w-[42%] rounded-xl p-5 shadow-xl flex flex-col bg-[#2E3A4C]"
               initial={{ x: -50, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.5 }}
             >
               <div className="flex items-center justify-between mb-4">
                 <div className="flex items-center">
-                  <span className="bg-[#2b2b2b] text-white px-4 py-1.5 rounded-full text-sm font-medium">
+                  <span className="bg-[#5B6573] text-[#FFFFFF] px-4 py-1.5 rounded-full text-sm font-medium">
                     {comparisonCards[currentCardIndex].withoutTitle}
                   </span>
                 </div>
-                <span className="bg-[#333333] text-white px-3 py-1 rounded-full text-sm font-medium">
+                <span className="bg-[#A3646E] text-[#FFFFFF] px-3 py-1 rounded-full text-sm font-medium">
                   {comparisonCards[currentCardIndex].withoutTag}
                 </span>
               </div>
               
-              <div className="bg-[#2b2b2b] rounded-lg p-4 mb-4 flex-grow">
-                <div className="bg-[#333333] rounded-md p-2.5 mb-3 text-sm text-gray-200">
+              <div className="bg-[#273447] rounded-lg p-4 mb-4 flex-grow">
+                <div className="bg-[#273447] rounded-md p-2.5 mb-3 text-sm text-[#D6DCE5]">
                   {comparisonCards[currentCardIndex].withoutSearch}
                 </div>
                 
-                <div className="text-white text-sm mb-4 leading-relaxed">
+                <div className="text-[#D6DCE5] text-sm mb-4 leading-relaxed">
                   {comparisonCards[currentCardIndex].withoutResult}
                 </div>
                 
-                <div className="border-t border-[#444444] pt-3 text-gray-300 text-sm">
+                <div className="border-t border-[#444444] pt-3 text-[#A2A9B6] text-sm">
                   {comparisonCards[currentCardIndex].withoutFeature}
                 </div>
               </div>
               
               <div className="flex items-center justify-between text-sm mt-auto">
-                <span className="text-gray-300">{comparisonCards[currentCardIndex].withoutFooter}</span>
-                <span className="bg-[#333333] px-3 py-1.5 rounded-md text-white text-xs font-medium">
+                <span className="text-[#A2A9B6]">{comparisonCards[currentCardIndex].withoutFooter}</span>
+                <span className="bg-[#5B6573] px-3 py-1.5 rounded-md text-[#FFFFFF] text-xs font-medium">
                   {comparisonCards[currentCardIndex].withoutFooterLabel}
                 </span>
               </div>
