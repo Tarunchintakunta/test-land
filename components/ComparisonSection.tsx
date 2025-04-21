@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
-import React, { useState, useRef, useEffect } from 'react';
-import { motion, useInView } from 'framer-motion';
-import Button from './Button';
+import React, { useState, useRef, useEffect } from "react";
+import { motion, useInView } from "framer-motion";
+import Button from "./Button";
 
 const ComparisonSection = () => {
   const [currentCardIndex, setCurrentCardIndex] = useState(0);
@@ -12,113 +12,97 @@ const ComparisonSection = () => {
   // Comparison card data
   const comparisonCards = [
     {
-      title: 'Analyze free cash flow conversion ratios across NSE healthcare services sector',
-      withoutTitle: 'WITHOUT FIRMI',
-      withoutSearch: 'Searching: "Healthcare companies India FCF conversion"',
-      withoutResult: 'Results: 18 documents with partial financial data. Now manually extract FCF components, normalize for exceptional items, create comparable metrics...',
-      withoutFeature: 'Manual cross-referencing required',
-      withoutFooter: 'Traditional search finds documents.',
-      withoutTag: 'Limited Results',
-      withoutFooterLabel: 'SEARCH',
-      withTitle: 'WITH FIRMI',
-      withSearch: 'Searching: "Free cash flow conversion trend analysis NSE healthcare services normalized for one-time factors"',
-      withResult: 'Instant results: "Apollo Hospitals shows 89% FCF conversion vs sector average 71%. Fortis Healthcare improved conversion by 15pp over 8 quarters through inventory management initiatives mentioned in Q3FY24 call."',
-      withFeature: 'Complex patterns identified automatically',
-      withFooter: 'Firmi finds insights.',
-      withTag: 'Instant Analysis',
-      withFooterLabel: 'INSIGHT'
+      title: "Pharmaceutical Analysis",
+      withoutTitle: "WITHOUT FIRMI",
+      withoutSearch:
+        'Searching: "Pharma companies ANDA approvals and FDA inspections"',
+      withoutResult:
+        "Analyst downloads annual reports and quarterly statements from 12 NSE-listed pharma companies, manually tracking ANDA approvals, US FDA inspection outcomes, and R&D pipelines. Spends 15+ hours creating comparison tables and struggles to connect regulatory events with stock price movements.",
+      withoutFeature: "Manual data extraction and analysis required",
+      withoutFooter: "Traditional research takes days.",
+      withoutTag: "Time-Consuming",
+      // withoutFooterLabel: "RESEARCH",
+      withTitle: "WITH FIRMI",
+      withSearch:
+        'Analyzing: "Which NSE pharma companies have received USFDA approvals for complex generics while maintaining clean inspection records in the past year?"',
+      withResult:
+        'Firmi instantly processes regulatory filings and earnings data to report "Sun Pharma and Dr. Reddy\'s received 7 and 5 complex generics approvals respectively, with no Form 483 observations at key manufacturing facilities, driving 15% average US revenue growth."',
+      withFeature:
+        "Instant correlation of regulatory events with financial impact",
+      withFooter: "Firmi delivers actionable insights.",
+      withTag: "Instant Analysis",
+      // withFooterLabel: "INSIGHT",
     },
     {
-      title: 'Document Search',
-      withoutTitle: 'WITHOUT FIRMI',
-      withoutSearch: 'Searching: "HDFC Bank NIM expansion Q3 FY25"',
-      withoutResult: 'Results: 47 documents across 6 platforms. Now manually check each to find the actual numbers and management commentary...',
-      withoutFeature: 'Manual cross-referencing required',
-      withoutFooter: 'Traditional search finds documents.',
-      withoutTag: 'Limited Results',
-      withoutFooterLabel: 'SEARCH',
-      withTitle: 'WITH FIRMI',
-      withSearch: 'Searching: "Companies where NIM expanded >15bps QoQ but management cited pressure on yields"',
-      withResult: 'Instant results: "4 banks including HDFC Bank (NIM +18bps to 4.32%) mentioned \'competitive pressure\' in Q3 FY25 calls despite margin expansion."',
-      withFeature: 'Complex patterns identified automatically',
-      withFooter: 'Firmi finds insights.',
-      withTag: 'Instant Analysis',
-      withFooterLabel: 'INSIGHT'
+      title: "Banking Sector Analysis",
+      withoutTitle: "WITHOUT FIRMI",
+      withoutSearch: 'Searching: "Bank NPA trends and CASA ratios"',
+      withoutResult:
+        "Banking analyst downloads quarterly reports from all NSE-listed banks, manually extracting NPA trends, CASA ratios, and credit growth into spreadsheets. Spends 10+ hours normalizing data and building visualizations, struggling to correlate management commentary with changing asset quality trends.",
+      withoutFeature: "Manual data compilation and normalization required",
+      withoutFooter: "Traditional analysis takes hours.",
+      withoutTag: "Resource Intensive",
+      // withoutFooterLabel: "ANALYZE",
+      withTitle: "WITH FIRMI",
+      withSearch:
+        'Analyzing: "Which NSE-listed private banks have reduced GNPA ratios while increasing retail loan book by >20% YoY?"',
+      withResult:
+        "Firmi instantly analyzes all bank disclosures and identifies \"HDFC Bank, ICICI Bank and Kotak Bank have achieved dual improvements, with management specifically attributing success to 'upgraded underwriting algorithms' and 'expanded digital lending channels' mentioned in earnings calls.\"",
+      withFeature:
+        "Automated correlation of financial metrics with management commentary",
+      withFooter: "Firmi connects the dots instantly.",
+      withTag: "Strategic Insights",
+      // withFooterLabel: "STRATEGIZE",
     },
     {
-      title: 'Data Extraction',
-      withoutTitle: 'WITHOUT FIRMI',
-      withoutSearch: 'Extracting: "Debt/EBITDA ratios for S&P 500 companies"',
-      withoutResult: 'Results: Downloaded 500+ financial statements. Need to create formulas, normalize data, and manually check calculations.',
-      withoutFeature: 'Hours of spreadsheet work required',
-      withoutFooter: 'Traditional extraction requires human labor.',
-      withoutTag: 'Time-Consuming',
-      withoutFooterLabel: 'EXTRACT',
-      withTitle: 'WITH FIRMI',
-      withSearch: 'Asking: "Which S&P 500 companies have increased Debt/EBITDA by >0.5x while maintaining dividend growth?"',
-      withResult: 'Instant results: "17 companies including Microsoft, Apple, and Amazon increased leverage while growing dividends. Average Debt/EBITDA change: +0.7x."',
-      withFeature: 'Calculations performed automatically across documents',
-      withFooter: 'Firmi delivers numerical insights.',
-      withTag: 'Real-time Analytics',
-      withFooterLabel: 'ANALYZE'
+      title: "Real Estate Analysis",
+      withoutTitle: "WITHOUT FIRMI",
+      withoutSearch:
+        'Searching: "Real estate booking values and collection data"',
+      withoutResult:
+        "Real estate analyst reviews quarterly investor presentations from 8 NSE-listed developers, manually extracting booking values, collection data, and project completion timelines. Spends 12 hours organizing data to understand which companies are outperforming in sales velocity but struggles to connect performance with specific project types.",
+      withoutFeature: "Manual data compilation and analysis required",
+      withoutFooter: "Traditional research takes days.",
+      withoutTag: "Time-Consuming",
+      // withoutFooterLabel: "RESEARCH",
+      withTitle: "WITH FIRMI",
+      withSearch:
+        'Analyzing: "Which NSE real estate companies have increased sales bookings >25% YoY while maintaining average collection efficiency above 90% in Q3?"',
+      withResult:
+        'Firmi instantly processes all disclosures and reports "Godrej Properties and Prestige Estates outperformed peers with 32% and 28% booking growth respectively, with strongest performance in mid-luxury segment projects in Bangalore and Mumbai as mentioned in analyst calls."',
+      withFeature: "Instant correlation of sales metrics with project types",
+      withFooter: "Firmi identifies market leaders.",
+      withTag: "Market Intelligence",
+      // withFooterLabel: "INTELLIGENCE",
     },
     {
-      title: 'Document Processing',
-      withoutTitle: 'WITHOUT FIRMI',
-      withoutSearch: 'Processing: "Identify all clauses mentioning force majeure in contracts"',
-      withoutResult: 'Results: Keyword search found 78 mentions across 42 documents. Need legal review to determine actual implications and variations.',
-      withoutFeature: 'Legal expertise required for interpretation',
-      withoutFooter: 'Traditional processing finds text matches.',
-      withoutTag: 'Limited Context',
-      withoutFooterLabel: 'PROCESS',
-      withTitle: 'WITH FIRMI',
-      withSearch: 'Asking: "Which contracts have force majeure clauses that could be triggered by supply chain disruptions?"',
-      withResult: 'Instant results: "23 contracts have clauses specifically covering supply chain issues. 7 have high risk exposure based on geographic limitations and notification periods."',
-      withFeature: 'Semantic understanding of contractual implications',
-      withFooter: 'Firmi understands document context.',
-      withTag: 'Risk Assessment',
-      withFooterLabel: 'UNDERSTAND'
+      title: "Automotive Sector Analysis",
+      withoutTitle: "WITHOUT FIRMI",
+      withoutSearch: 'Searching: "Auto companies sales data and margin trends"',
+      withoutResult:
+        "Auto sector analyst manually compiles monthly sales data, export figures, and margin trends from 10 NSE-listed automotive companies. Spends 2 days creating spreadsheets to track market share evolution and struggles to incorporate commentary on raw material costs from earnings calls.",
+      withoutFeature: "Manual data compilation and analysis required",
+      withoutFooter: "Traditional research takes days.",
+      withoutTag: "Time-Consuming",
+      // withoutFooterLabel: "RESEARCH",
+      withTitle: "WITH FIRMI",
+      withSearch:
+        'Analyzing: "Which NSE auto companies have gained domestic market share while improving EBITDA margins despite rising input costs in the last 2 quarters?"',
+      withResult:
+        "Firmi instantly processes all disclosures and identifies \"Maruti Suzuki and Tata Motors increased market share by 1.8% and 2.1% respectively while expanding margins, with management highlighting 'improved product mix' and 'operating leverage' as key factors offsetting higher aluminum and steel costs.\"",
+      withFeature: "Instant correlation of market share with margin drivers",
+      withFooter: "Firmi reveals competitive advantages.",
+      withTag: "Competitive Analysis",
+      // withFooterLabel: "ANALYZE",
     },
-    {
-      title: 'Market Intelligence',
-      withoutTitle: 'WITHOUT FIRMI',
-      withoutSearch: 'Researching: "Competitor pricing changes in SaaS market Q1 2025"',
-      withoutResult: 'Results: 28 press releases and 15 earnings calls mention pricing. Need to manually extract specific changes and compare across companies.',
-      withoutFeature: 'Comparison tables must be built manually',
-      withoutFooter: 'Traditional research gathers mentions.',
-      withoutTag: 'Fragmented Data',
-      withoutFooterLabel: 'RESEARCH',
-      withTitle: 'WITH FIRMI',
-      withSearch: 'Asking: "Which SaaS competitors increased enterprise pricing while adding AI features in Q1 2025?"',
-      withResult: 'Instant results: "9 competitors including Salesforce, Adobe and ServiceNow raised enterprise pricing by avg. 12% while launching AI features. 3 maintained pricing despite new AI capabilities."',
-      withFeature: 'Cross-company trend analysis automated',
-      withFooter: 'Firmi identifies market patterns.',
-      withTag: 'Strategic Insights',
-      withFooterLabel: 'STRATEGIZE'
-    },
-    {
-      title: 'Compliance Monitoring',
-      withoutTitle: 'WITHOUT FIRMI',
-      withoutSearch: 'Auditing: "GDPR compliance violations in customer communications"',
-      withoutResult: 'Results: 150+ customer emails need review for data privacy language. Compliance team must check each against latest regulations.',
-      withoutFeature: 'Time-intensive compliance reviews required',
-      withoutFooter: 'Traditional auditing checks documents one by one.',
-      withoutTag: 'Resource Intensive',
-      withoutFooterLabel: 'AUDIT',
-      withTitle: 'WITH FIRMI',
-      withSearch: 'Asking: "Identify communications with non-compliant data retention policies under latest GDPR amendments"',
-      withResult: 'Instant results: "27 communications found with outdated retention language. Auto-generated compliance report shows 3 high-risk templates needing immediate updates to align with Article 17 amendments."',
-      withFeature: 'Regulatory updates continuously monitored',
-      withFooter: 'Firmi ensures continuous compliance.',
-      withTag: 'Risk Mitigation',
-      withFooterLabel: 'PROTECT'
-    }
   ];
 
   // Auto-change cards every 8 seconds
   useEffect(() => {
     const timer = setInterval(() => {
-      setCurrentCardIndex((prevIndex) => (prevIndex + 1) % comparisonCards.length);
+      setCurrentCardIndex(
+        (prevIndex) => (prevIndex + 1) % comparisonCards.length
+      );
     }, 8000);
 
     return () => clearInterval(timer);
@@ -141,93 +125,107 @@ const ComparisonSection = () => {
 
         <div className="relative" ref={cardsContainerRef}>
           {/* Cards Container */}
-          <motion.div 
+          <motion.div
             className="flex gap-8 justify-center items-stretch"
-            animate={{ 
-              x: isInView ? 0 : '100%',
-              opacity: isInView ? 1 : 0
+            animate={{
+              x: isInView ? 0 : "100%",
+              opacity: isInView ? 1 : 0,
             }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
             {/* Without Card */}
-            <motion.div 
-              className="comparison-card w-[42%] rounded-xl p-5 shadow-xl flex flex-col bg-[#2E3A4C]"
-              initial={{ x: -50, opacity: 0 }}
-              animate={{ x: 0, opacity: 1 }}
-              transition={{ duration: 0.5 }}
-            >
-              <div className="flex items-center justify-between mb-4">
-                <div className="flex items-center">
-                  <span className="bg-[#5B6573] text-[#FFFFFF] px-4 py-1.5 rounded-full text-sm font-medium">
-                    {comparisonCards[currentCardIndex].withoutTitle}
+            {comparisonCards[currentCardIndex] && (
+              <motion.div
+                className="comparison-card w-[45%] min-h-[420px] rounded-xl p-5 shadow-xl flex flex-col bg-[#2E3A4C]"
+                initial={{ x: -50, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                transition={{ duration: 0.5 }}
+              >
+                <div className="flex items-center justify-between mb-4">
+                  <div className="flex items-center">
+                    <span className="bg-[#5B6573] text-[#FFFFFF] px-4 py-1.5 rounded-full text-sm font-medium">
+                      {comparisonCards[currentCardIndex].withoutTitle}
+                    </span>
+                  </div>
+                  <span className="bg-[#A3646E] text-[#FFFFFF] px-3 py-1 rounded-full text-sm font-medium">
+                    {comparisonCards[currentCardIndex].withoutTag}
                   </span>
                 </div>
-                <span className="bg-[#A3646E] text-[#FFFFFF] px-3 py-1 rounded-full text-sm font-medium">
-                  {comparisonCards[currentCardIndex].withoutTag}
-                </span>
-              </div>
-              
-              <div className="bg-[#273447] rounded-lg p-4 mb-4 flex-grow">
-                <div className="bg-[#273447] rounded-md p-2.5 mb-3 text-sm text-[#D6DCE5]">
-                  {comparisonCards[currentCardIndex].withoutSearch}
+
+                <div className="bg-[#273447] rounded-lg p-4 mb-4 flex-grow">
+                  <div className="bg-[#273447] rounded-md p-2.5 mb-3 text-sm text-[#D6DCE5] border border-[#374357]">
+                    <span className="text-[#B8D1F3] font-semibold tracking-wide mr-2 uppercase text-xs">
+                      Searching:
+                    </span>
+                    {comparisonCards[currentCardIndex].withoutSearch.replace(
+                      "Searching: ",
+                      ""
+                    )}
+                  </div>
+
+                  <div className="text-[#D6DCE5] text-sm mb-4 leading-relaxed min-h-[160px]">
+                    {comparisonCards[currentCardIndex].withoutResult}
+                  </div>
+
+                  <div className="border-t border-[#444444] pt-3 text-[#A2A9B6] text-sm">
+                    {comparisonCards[currentCardIndex].withoutFeature}
+                  </div>
                 </div>
-                
-                <div className="text-[#D6DCE5] text-sm mb-4 leading-relaxed">
-                  {comparisonCards[currentCardIndex].withoutResult}
+
+                <div className="flex items-center justify-between text-sm mt-auto">
+                  <span className="text-[#A2A9B6]">
+                    {comparisonCards[currentCardIndex].withoutFooter}
+                  </span>
                 </div>
-                
-                <div className="border-t border-[#444444] pt-3 text-[#A2A9B6] text-sm">
-                  {comparisonCards[currentCardIndex].withoutFeature}
-                </div>
-              </div>
-              
-              <div className="flex items-center justify-between text-sm mt-auto">
-                <span className="text-[#A2A9B6]">{comparisonCards[currentCardIndex].withoutFooter}</span>
-                <span className="bg-[#5B6573] px-3 py-1.5 rounded-md text-[#FFFFFF] text-xs font-medium">
-                  {comparisonCards[currentCardIndex].withoutFooterLabel}
-                </span>
-              </div>
-            </motion.div>
-            
+              </motion.div>
+            )}
+
             {/* With Card */}
-            <motion.div 
-              className="comparison-card w-[42%] rounded-xl p-5 shadow-xl flex flex-col bg-[#415d80]"
-              initial={{ x: 50, opacity: 0 }}
-              animate={{ x: 0, opacity: 1 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-            >
-              <div className="flex items-center justify-between mb-4">
-                <div className="flex items-center">
-                  <span className="bg-[#4e6b8e]/60 text-white px-4 py-1.5 rounded-full text-sm font-medium">
-                    {comparisonCards[currentCardIndex].withTitle}
+            {comparisonCards[currentCardIndex] && (
+              <motion.div
+                className="comparison-card w-[45%] min-h-[420px] rounded-xl p-5 shadow-xl flex flex-col bg-[#415d80]"
+                initial={{ x: 50, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+              >
+                <div className="flex items-center justify-between mb-4">
+                  <div className="flex items-center">
+                    <span className="bg-[#4e6b8e]/60 text-white px-4 py-1.5 rounded-full text-sm font-medium">
+                      {comparisonCards[currentCardIndex].withTitle}
+                    </span>
+                  </div>
+                  <span className="bg-[#5a7799] text-white px-3 py-1 rounded-full text-sm font-medium">
+                    {comparisonCards[currentCardIndex].withTag}
                   </span>
                 </div>
-                <span className="bg-[#5a7799] text-white px-3 py-1 rounded-full text-sm font-medium">
-                  {comparisonCards[currentCardIndex].withTag}
-                </span>
-              </div>
-              
-              <div className="bg-[#4e6b8e] rounded-lg p-4 mb-4 flex-grow">
-                <div className="bg-[#5a7799] rounded-md p-2.5 mb-3 text-sm text-gray-100">
-                  {comparisonCards[currentCardIndex].withSearch}
+
+                <div className="bg-[#4e6b8e] rounded-lg p-4 mb-4 flex-grow">
+                  <div className="bg-[#5a7799] rounded-md p-2.5 mb-3 text-sm text-gray-100 border border-[#6888aa]">
+                    <span className="text-[#E2ECF8] font-semibold tracking-wide mr-2 uppercase text-xs">
+                      Analyzing:
+                    </span>
+                    {comparisonCards[currentCardIndex].withSearch.replace(
+                      "Analyzing: ",
+                      ""
+                    )}
+                  </div>
+
+                  <div className="text-white text-sm mb-4 leading-relaxed min-h-[160px]">
+                    {comparisonCards[currentCardIndex].withResult}
+                  </div>
+
+                  <div className="border-t border-[#5a7799]/50 pt-3 text-gray-100 text-sm">
+                    {comparisonCards[currentCardIndex].withFeature}
+                  </div>
                 </div>
-                
-                <div className="text-white text-sm mb-4 leading-relaxed">
-                  {comparisonCards[currentCardIndex].withResult}
+
+                <div className="flex items-center justify-between text-sm mt-auto">
+                  <span className="text-gray-100">
+                    {comparisonCards[currentCardIndex].withFooter}
+                  </span>
                 </div>
-                
-                <div className="border-t border-[#5a7799]/50 pt-3 text-gray-100 text-sm">
-                  {comparisonCards[currentCardIndex].withFeature}
-                </div>
-              </div>
-              
-              <div className="flex items-center justify-between text-sm mt-auto">
-                <span className="text-gray-100">{comparisonCards[currentCardIndex].withFooter}</span>
-                <span className="bg-[#5a7799] px-3 py-1.5 rounded-md text-white text-xs font-medium">
-                  {comparisonCards[currentCardIndex].withFooterLabel}
-                </span>
-              </div>
-            </motion.div>
+              </motion.div>
+            )}
           </motion.div>
 
           {/* Dot Navigation */}
@@ -237,8 +235,8 @@ const ComparisonSection = () => {
                 key={index}
                 className={`w-2.5 h-2.5 rounded-full cursor-pointer transition-all duration-300 ${
                   index === currentCardIndex
-                    ? 'bg-gradient-to-r from-[#2b4559] to-[#497293] scale-125'
-                    : 'bg-gray-300 hover:bg-gray-400'
+                    ? "bg-gradient-to-r from-[#2b4559] to-[#497293] scale-125"
+                    : "bg-gray-300 hover:bg-gray-400"
                 }`}
                 onClick={() => setCurrentCardIndex(index)}
               />
