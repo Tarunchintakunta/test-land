@@ -118,7 +118,7 @@ const ComparisonSection = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-3xl font-semibold text-[#415d80]  mb-4">
+          <h2 className="text-3xl font-['Tiempos Headline'] font-[400] text-[#415d80] mb-4">
             Firmi enables technical teams to handle complex documents.
           </h2>
         </motion.div>
