@@ -136,7 +136,7 @@ const ComparisonSection = () => {
             {/* Without Card */}
             {comparisonCards[currentCardIndex] && (
               <motion.div
-                className="comparison-card w-[45%] min-h-[420px] rounded-xl p-5 shadow-xl flex flex-col bg-[#2E3A4C]"
+                className="comparison-card w-[48%] min-h-[380px] rounded-xl p-5 shadow-xl flex flex-col bg-[#2E3A4C]"
                 initial={{ x: -50, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
                 transition={{ duration: 0.5 }}
@@ -153,7 +153,7 @@ const ComparisonSection = () => {
                 </div>
 
                 <div className="bg-[#273447] rounded-lg p-4 mb-4 flex-grow">
-                  <div className="bg-[#273447] rounded-md p-2.5 mb-3 text-sm text-[#D6DCE5] border border-[#374357]">
+                  <div className="bg-[#1a2231] rounded-md p-2.5 mb-3 text-sm text-[#D6DCE5] border border-[#374357] shadow-inner">
                     <span className="text-[#B8D1F3] font-semibold tracking-wide mr-2 uppercase text-xs">
                       Searching:
                     </span>
@@ -163,7 +163,7 @@ const ComparisonSection = () => {
                     )}
                   </div>
 
-                  <div className="text-[#D6DCE5] text-sm mb-4 leading-relaxed min-h-[160px]">
+                  <div className="text-[#D6DCE5] text-sm mb-4 leading-relaxed min-h-[140px]">
                     {comparisonCards[currentCardIndex].withoutResult}
                   </div>
 
@@ -183,7 +183,7 @@ const ComparisonSection = () => {
             {/* With Card */}
             {comparisonCards[currentCardIndex] && (
               <motion.div
-                className="comparison-card w-[45%] min-h-[420px] rounded-xl p-5 shadow-xl flex flex-col bg-[#415d80]"
+                className="comparison-card w-[48%] min-h-[380px] rounded-xl p-5 shadow-xl flex flex-col bg-[#415d80]"
                 initial={{ x: 50, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
                 transition={{ duration: 0.5, delay: 0.2 }}
@@ -200,7 +200,7 @@ const ComparisonSection = () => {
                 </div>
 
                 <div className="bg-[#4e6b8e] rounded-lg p-4 mb-4 flex-grow">
-                  <div className="bg-[#5a7799] rounded-md p-2.5 mb-3 text-sm text-gray-100 border border-[#6888aa]">
+                  <div className="bg-[#334863] rounded-md p-2.5 mb-3 text-sm text-gray-100 border border-[#6888aa] shadow-inner">
                     <span className="text-[#E2ECF8] font-semibold tracking-wide mr-2 uppercase text-xs">
                       Analyzing:
                     </span>
@@ -210,7 +210,7 @@ const ComparisonSection = () => {
                     )}
                   </div>
 
-                  <div className="text-white text-sm mb-4 leading-relaxed min-h-[160px]">
+                  <div className="text-white text-sm mb-4 leading-relaxed min-h-[140px]">
                     {comparisonCards[currentCardIndex].withResult}
                   </div>
 
